@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `asesores`
 --
 
-CREATE TABLE IF NOT EXISTS `asesores` (
+CREATE TABLE IF NOT EXISTS `usuarioC` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `usr` varchar(50) NOT NULL,
   `nombre` varchar(100) NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `asesores` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
--- Volcado de datos para la tabla `asesores`
+-- Volcado de datos para la tabla `usuarioc`
 --
 
 INSERT INTO `asesores` (`id`, `usr`, `nombre`, `apellido`, `correo`, `numidentificacion`, `telefono`, `pais`, `profesion`, `categoria`, `acerca`, `saldo`) VALUES
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `chat` (
 -- Volcado de datos para la tabla `chat`
 --
 
-INSERT INTO `chat` (`id`, `cliente`, `asesor`) VALUES
+INSERT INTO `chat` () VALUES
 (1, 'emilio', 'antonio21'),
 (2, 'emilio', 'pedro21'),
 (3, 'joshua', 'pedro21'),
@@ -83,7 +83,7 @@ INSERT INTO `chat` (`id`, `cliente`, `asesor`) VALUES
 -- Estructura de tabla para la tabla `clientes`
 --
 
-CREATE TABLE IF NOT EXISTS `clientes` (
+CREATE TABLE IF NOT EXISTS  (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `usr` varchar(50) DEFAULT NULL,
   `nombre` varchar(100) NOT NULL,
@@ -202,29 +202,8 @@ INSERT INTO `habilidades` (`id`, `usr`, `tipo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `propuestas`
 --
-
-CREATE TABLE IF NOT EXISTS `propuestas` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `titulo` varchar(100) NOT NULL,
-  `fecha` varchar(20) NOT NULL,
-  `presupuesto` decimal(10,0) NOT NULL,
-  `propuesta` varchar(400) NOT NULL,
-  `cliente` varchar(40) NOT NULL,
-  `asesor` varchar(40) NOT NULL,
-  `stado` int(11) NOT NULL,
-  `status` int(11) NOT NULL,
-  `liberar` int(11) NOT NULL,
-  `cobrar` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
-
---
--- Volcado de datos para la tabla `propuestas`
---
-
-INSERT INTO `propuestas` (`id`, `titulo`, `fecha`, `presupuesto`, `propuesta`, `cliente`, `asesor`, `stado`, `status`, `liberar`, `cobrar`) VALUES
+INSERT INTO ` (`id`, `titulo`, `fecha`, `presupuesto`, `propuesta`, `cliente`, `asesor`, `stado`, `status`, `liberar`, `cobrar`) VALUES
 (1, 'Asesoria de bienes ', '2018-09-30', '6767', 'Adiosss\r\n', 'emilio', 'pedro21', 2, 3, 1, 0),
 (2, 'Asesoria de Programacion ', '2018-09-30', '67', 'Adiosss  Portal web en Laravel con sincronización de app Android\nEl portal funciona en un host y se desarrolló en el entorno Laravel. Esta web recibe información', 'emilio', 'pedro21', 2, 1, 0, 0),
 (3, 'Asesoria de Matematicas', '2018-09-30', '6768', 'tyio7gyihlig 787yli 9p 89yoh', 'emilio', 'antonio21', 1, 0, 0, 0),
